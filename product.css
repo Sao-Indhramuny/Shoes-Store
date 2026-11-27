@@ -117,7 +117,7 @@ header .menu ul li a:hover::after
     width: 58%;
     flex-wrap: wrap;
     display: grid;
-    gap: 28.6px;
+    gap: 15px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2,1fr);
     
