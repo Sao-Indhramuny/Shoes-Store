@@ -1,0 +1,554 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+body{
+    background-color:#F9F9FB;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+}
+.container{
+    width: 100%;
+    
+}
+header{
+   top: 0;
+    position: sticky;
+    z-index: 100;   
+    width: 100%;
+    box-shadow: 0 0 20px #f1f1f5;
+    background-color:#FFFFFF;
+    padding: 10px 50px;
+}
+header .logo{
+    user-select: none;
+    font-weight: 700;
+    text-align: center;
+}
+header  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo p{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+header .menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 0;
+     flex-wrap: wrap;
+    margin: 0;
+}
+header .menu ul li{   
+    list-style-type: none;
+}
+header .menu ul li a{
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    text-transform: uppercase;
+    transition: transform .5s ease;
+
+}
+header .menu ul li a::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.751);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: scale(0);
+    transition: transform .5s ease;
+    transform-origin: left;
+}
+header .menu ul li a:hover{
+    text-shadow: 0.3px 0 0 black, -0.3px 0 0 black;
+    transform: translateY(-5px);
+}
+
+header .menu ul li a:hover::after
+{
+    transform: scale(1);
+}
+
+
+.chart-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 15px;
+} 
+.chart-icon a{
+    color: black;
+}
+
+section{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+section .container{
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+section .container .sub-header{
+    display: flex;
+    margin: 40px 0 0px;
+    gap: 10px;
+}
+
+section .container .sub-header a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+section .container .sub-header a::after{
+    content: '';
+    width: 0%;
+    display: block;
+    height: 2px;
+    background-color: black;
+    transition: width .3s ease;
+}
+section .container .sub-header a:hover::after{
+    width: 100%;
+    color: black;
+    font-weight: 700;
+}
+section .container .sub-header i{
+    color: #8d8c8f;
+    font-size: 10px;
+}
+section .container .hero{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    
+}
+ .left-content{
+    width: 55%;
+    padding: 2px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+ .form1{
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 2px rgb(193, 189, 189);
+}
+.form1 h1, .content h1{
+    font-size: 30px;
+}
+ .form1 .name {
+    display: flex;
+    justify-content: space-between;
+}
+ .form1 .name .input-name{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 49%;
+    
+
+}
+.input-name input,.address .input-address input, .input-info .state input,.input-info .city input{
+    padding: 15px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.529);
+}
+.input-name label, .input-address label, .input-info label, .input-card-number label {
+    color: rgba(0, 0, 0, 0.549);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.address .input-address {
+    display: flex;
+    flex-direction: column;
+}
+.address .input-address input , .input-info .state input, .input-info .city input , .input-card-number input{
+    margin-top: 10px;
+}
+.info{
+    margin-bottom: 15px;
+}
+.input-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.input-info .city {
+    width:40%;
+    display: flex;
+    flex-direction: column;
+}
+.input-info .state{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.btn-check {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #d9d9dc;
+  background: #fff;
+  cursor: pointer;
+  
+}
+
+.btn-check .btn {
+    display: flex;
+    align-items: center;             
+    gap: 12px;
+}
+.btn-check .btn input{
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    accent-color: #000;     
+}
+.btn-check:has(input:checked) {
+  border-color: #000;
+  background: #f5f5f7;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon {
+    display: flex;
+    gap: 10px;
+    
+}
+.icon i{
+    color: rgb(87, 83, 83);
+}
+
+.input-card-number{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+.input-card-number i{
+    position: absolute;
+    top: 57%;
+    left: 20px;
+    color: rgb(99, 94, 94);
+    
+}
+
+.input-card-number input{
+    padding: 15px 50px;
+    border: 2px solid rgba(0, 0, 0, 0.529);
+}
+
+section .container .hero .right-content{
+    width: 42%;
+    overflow: hidden;
+    padding: 1px;
+
+}
+.right-content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.right-content .content{
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 0 2px rgb(193, 189, 189);
+    
+}
+.content .box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.inside-box{
+    display: flex;
+    gap: 20px;
+}
+.inside-box .img{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+}
+.inside-box .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.inside-box .text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.inside-box .text h1{
+    color: rgb(103, 102, 102);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.inside-box .text h3 {
+    font-weight: 700;
+    color:#000000df
+}
+.inside-box .text p{
+    color: #00000056;
+    font-size: 15px;
+}
+.inside-box .text h2{
+    font-size: 20px;
+    letter-spacing: 0;
+}
+.line, .line1{
+    width: 100%;
+}
+.ruler, .ruler1{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.463);
+
+}
+.calculate{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.calculate .text-price{
+    display: flex;
+    justify-content: space-between;
+}
+.calculate .text-price p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.calculate .text-price .green{
+    color: green;
+}
+.total-price{
+    display: flex;
+    justify-content: space-between;
+
+}
+.total-price h1{
+    font-size: 25px;
+}
+.order-btn {
+    width: 100%;
+}
+
+.order-btn .btn {
+    width: 100%;
+    padding: 15px 35px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.adding-text{
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+.adding-text .text-inside{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 15px;
+}
+.adding-text .text-inside .text-icon{
+    display: flex;
+    gap: 5px;
+
+}
+.adding-text .text-inside .text-icon i,.adding-text .text-inside .text-icon a{
+    color: rgba(0, 0, 0, 0.781);
+}
+.text-icon a{
+    text-decoration: none;
+}
+.input{
+    display: flex;
+    justify-content: space-between;
+}
+.input input{
+    width: 72%;;
+    padding: 10px 15px;
+    border: 2px solid rgba(0, 0, 0, 0.484);
+    outline: none;
+
+}
+.input button{
+    width: 26%;
+    font-weight: 700;
+    background-color: transparent;
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 50px;
+    background-color: #E2E1E4;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 40px;
+    
+
+}
+.top-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+    
+}
+
+.top-footer .footer .logo{
+    display: block;
+    user-select: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 22px ;
+    margin-top: 22px;
+}
+.top-footer .footer h1{
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 22px ;
+    margin-top: 22px;
+    opacity: 0.6;
+
+}
+/* .top-footer .footer .icon{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+} */
+.top-footer .footer .icon button{
+    width: 30px;
+    height:30px;
+    border: 2px solid rgba(0, 0, 0, 0.401);
+    border-radius: 5px;
+    outline: none;
+}
+.top-footer .footer .icon button i{
+    text-align: center;
+}
+
+.top-footer .footer ul{
+    padding: 0;
+    margin: 0;
+}
+.top-footer .footer ul li{
+    list-style-type: none;
+    
+}
+.top-footer .footer ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 0;
+    color: rgba(0, 0, 0, 0.493);
+
+}
+.top-footer .footer ul li a:hover{
+    text-decoration: underline;
+}
+.bottom-footer{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     margin-bottom: 22px ;
+}
+.bottom-footer p{
+    opacity: 0.7;
+}
+.footer .user-input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer .email{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.footer .user-input button{
+    padding: 8px 15px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 500;
+}
+.footer .email i{
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+}
+.footer .email input{
+    padding: 10px 25px;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    border-radius: 8px;
+   
+}
+

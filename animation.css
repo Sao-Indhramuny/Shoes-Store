@@ -1,0 +1,50 @@
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+header {
+    animation: slideDown 0.7s ease;
+    transition: box-shadow 0.3s;
+}
+
+.chart-icon a i {
+    transition: transform 0.2s, color 0.2s;
+}
+
+.chart-icon i:hover {
+    transform: scale(1.2);
+}
+.top-footer .footer ul li a{
+    transition: all 0.25s;
+
+}
+.top-footer .footer ul li a:hover{
+    transform: translateX(4px);
+}
